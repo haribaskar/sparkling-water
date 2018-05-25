@@ -47,3 +47,20 @@ class H2OMOJOPipelineModel(JavaModel, JavaMLWritable, JavaMLReadable):
 
     def predict(self, dataframe):
         return self.transform(dataframe)
+
+    def get_input_names(self):
+        self._java_obj.getInputNames()
+
+    def get_input_types(self):
+        self._java_obj.getInputTypes()
+
+    def get_output_names(self):
+        self._java_obj.getOutputNames()
+
+    def get_output_types(self):
+        self._java_obj.getOutputTypes()
+
+    def get_classes(self):
+        self._java_obj.getClasses()
+
+
